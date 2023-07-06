@@ -1,9 +1,7 @@
-const io = require('socket.io')(3000, {cors: {origin: "*"}})
-const cors = require('cors')
-io.on('connection', socket => {
-    cors({
-        origin: "*"
-    })
-    socket.emit('chat-message', 'hello world') 
-})
+var cors = require('cors');
+app.use(cors({origin: "*"}));
+const io = require('socket.io')(3000);
 
+io.on('connection', socket => {
+    socket.emit('chat-message', 'hello world')
+})

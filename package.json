@@ -1,8 +1,8 @@
 {
-  "name": "searchbar",
+  "name": "searchbar-1",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "devStart": "nodemon server.js"
   },
