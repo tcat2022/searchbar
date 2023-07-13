@@ -9,15 +9,10 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 
-const rooms = {}
-
 app.get('/', (req, res) => {
-res.render('index', {rooms: rooms })
-})
-
-app.get('/:room', (res,req) => {
-    res.render('room', {roomName: req.params.room })
-}) 
+    res.render('index')
+    })
+    
 
 server.listen(3000)
 
